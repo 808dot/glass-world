@@ -85,3 +85,12 @@
 
     }
 }
+
+@keyframes showModalFromTop{
+    from {
+        transform: translateY(-110%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}

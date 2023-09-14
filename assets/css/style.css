@@ -5,6 +5,21 @@
   --hookers-green-2: #4A6D67ff;
   --verdigris: #6CB1A7ff;
   --dark-slate-gray: #7ce2d5;
+  --deep-blue: #2E86AB;
+  --pale-green: #A4C3B2;
+  --golden-yellow: #F6AE2D;
+  --mint-green: #57CC99;
+  --light-gray-blue: #E8F1F2;
+  --coral-red: #FF6B6B;
+  --charcoal-gray:#333333;
+  --light-gray:#D9D9D9;
+  --gold: #FFD700;
+  --primary-color: #0077B6;
+  --secondary-color: #FF6B6B;
+  --accent-color: #4CAF50;
+  --primiray-color-font: #FFFFFF;
+  --secondary-color-font: #444444;
+  --accent-color-font: #333333;
 }
 
 * {
@@ -14,7 +29,7 @@
   font-family: "Source Code Pro", monospace;
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: var(--black);
 }
 
 html {
@@ -28,9 +43,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: var(--primary-color);
   z-index: 1000;
-  color: wheat;
 }
 .header .logo img {
   width: 144px;
@@ -46,7 +60,6 @@ html {
   margin-left: 32px;
   border-bottom: 2px solid transparent;
   font-size: 24px;
-  color: white;
   transition: 0.5s;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
@@ -79,7 +92,6 @@ html {
 .header .button-menu {
   display: none;
   font-size: 36px;
-  color: white;
   cursor: pointer;
   animation: slideTop 1s ease forwards;
   animation-delay: 0.8s;
@@ -98,11 +110,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: var(--primary-color);
   z-index: -2;
   transition: 0.5s;
 }
-.hero .home img {
+.hero .home img, .hero .home .home-bg {
   position: absolute;
   display: block;
   width: 80%;
@@ -110,6 +122,7 @@ html {
   z-index: -1;
   border-radius: 47% 53% 53% 47%/30% 62% 38% 70%;
   filter: blur(5px);
+  background: var(--accent-color);
   animation: blobEffect 15s ease-in-out infinite;
   transition: all 1s easy-in-out;
 }
@@ -126,15 +139,12 @@ html {
 }
 .hero .home .home-content-container .home-content-left h1 {
   font-size: 48px;
-  color: gold;
 }
 .hero .home .home-content-container .home-content-left p {
   font-size: 24px;
-  color: rgb(0, 0, 0);
 }
 .hero .home .home-content-container .home-content-left span {
   font-size: 654px;
-  color: rgb(0, 0, 0);
 }
 .hero .home .home-content-container .home-content-right {
   width: 200px;
@@ -155,7 +165,6 @@ html {
   line-height: 6px;
   height: 35px;
   font-size: 64px;
-  color: gold;
 }
 .hero .home .home-content-container .home-content-right .h1-container-2 {
   display: flex;
@@ -164,11 +173,9 @@ html {
 }
 .hero .home .home-content-container .home-content-right .h1-container-2 h1 {
   font-size: 40px;
-  color: gold;
 }
 .hero .home .home-content-container .home-content-right p {
   font-size: 24px;
-  color: rgb(0, 0, 0);
 }
 .hero .about-us {
   width: 100%;
@@ -178,15 +185,14 @@ html {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  background: var(--verdigris);
 }
 .hero .about-us .about-us-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  width: 20%;
-  height: 200px;
+  width: 25%;
+  height: 300px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
@@ -208,16 +214,57 @@ html {
 }
 .hero .realization {
   width: 100%;
-  height: 1200px;
+  height: 1400px;
   padding: 2% 10%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.hero .realization .modal {
+  width: 80%;
+  height: 550px;
+  position: fixed;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  overflow: clip;
+  top: 55%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: showModalFromTop 0.8s ease normal;
+}
+.hero .realization .modal .modal-content {
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: marquee 16s linear infinite;
+}
+.hero .realization .modal .modal-content img {
+  background: red;
+  width: 400px;
+  height: 500px;
+  padding: 0 16px;
+}
 .hero .realization .realization-box {
-  background-color: blue;
   width: 30%;
-  height: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero .realization .realization-box img {
+  width: 100%;
+  height: 400px;
+  transition: 0.5s;
+}
+.hero .realization .realization-box img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.hero .realization .realization-box p {
+  background-color: 0;
+  position: absolute;
 }
 .hero .contact {
   width: 100%;

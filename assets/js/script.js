@@ -1,27 +1,38 @@
-let nIntervId;
+let modal = document.querySelector('#modal');
+let realizationBox = document.querySelectorAll('.realization-box');
+let modalImg = document.querySelectorAll('.modal-content img');
 
-function starInterv() {
-    // check if an interval has already been set up
-    if (!nIntervId) {
-      nIntervId = setInterval(changeBlob, 100);
-    }
-  }
+realizationBox.forEach(box => {
+  box.addEventListener('click', () => {
 
-function changeBlob() {
-    let homeBg = document.querySelector('.home-bg');
-    console.log(homeBg);
-    let x = getRandomInt(99);
-    let y = getRandomInt(99);
-    let z = getRandomInt(99);
-    let w = getRandomInt(99);
+    let boxID = box.id;
+    console.log(boxID);
+    loadModalImg (boxID)
 
-    let borderRadiusValue = x + "% " + y + "% " + z + "% " + w + "% " + "/ " + x + "% " + y + "% " + z + "% " + w + "% ";
-    console.log(borderRadiusValue);
-    homeBg.style.borderRadius = borderRadiusValue;
+    modal.showModal();
+    modal.style.display = 'flex'
     
-}
+  });
+});
 
-// starInterv();
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
+
+modal.addEventListener('click', () => {
+  modal.close();
+  modal.style.display = 'none'
+});
+
+
+function loadModalImg (ID){
+  modalImg.forEach((IMG, i = 1)=>{
+    console.log(IMG);
+    
+    let imgPath = "assets/img/" + ID + "-" + i % 4 + ".jpg"
+    console.log(imgPath)
+    IMG.src = imgPath;
+    console.log(IMG);
+
+
+  });
+
+
+}
