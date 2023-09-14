@@ -115,6 +115,11 @@ html {
   align-items: center;
   flex-direction: column;
   color: wheat;
+  background: url(../img/home-bg-new.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .hero .home {
   width: 100%;
@@ -122,20 +127,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../img/home-bg-new.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   transition: 0.5s;
-  position: relative;
-  z-index: -1;
-}
-.hero .home .blur {
-  position: absolute;
-  backdrop-filter: blur(3px);
-  height: 100%;
-  width: 100%;
-  z-index: -2;
 }
 .hero .home .home-bg {
   width: 80%;
@@ -155,7 +147,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
 }
 .hero .home .home-bg .home-content-container .blur2 {
   background: rgba(255, 255, 255, 0.2);
@@ -215,7 +206,6 @@ html {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  background: var(#c9cac6);
 }
 .hero .about-us .about-us-box {
   display: flex;
@@ -250,7 +240,6 @@ html {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background: var(--pearl);
 }
 .hero .realization .modal {
   width: 80%;

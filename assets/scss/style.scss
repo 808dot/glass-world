@@ -136,6 +136,16 @@ html {
     align-items: center;
     flex-direction: column;
     color: wheat;
+    // position: fixed;
+
+    background: url(../img/home-bg-new.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
+    background-attachment: fixed;
+
+
+    
 
     .home{
         width: 100%;
@@ -143,23 +153,16 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url(../img/home-bg-new.jpg); 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;    
+        // background: url(../img/home-bg-new.jpg); 
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center center;    
         transition: .5s;
 
-        position: relative;
-        z-index: -1;
+        // position: relative;
+        // z-index: -1;
         
 
-        .blur {
-            position: absolute;
-            backdrop-filter: blur(3px); // This be the blur
-            height: 100%;
-            width: 100%;
-            z-index: -2;
-          }
         .home-bg{
             width: 80%;
             height: 70vh;
@@ -183,7 +186,7 @@ html {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                z-index: 1000;
+                // z-index: 1000;
 
                 .blur2{
                     background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
@@ -255,7 +258,7 @@ html {
         justify-content: center;
         align-items: center;
         transition: .5s;
-        background: var(#C9CAC6ff);
+        // background: var(#C9CAC6ff);
 
         .about-us-box{
             display: flex;
@@ -295,7 +298,7 @@ html {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        background: var(--pearl);
+        // background: var(--pearl);
         
         .modal {
             width: 80%;
