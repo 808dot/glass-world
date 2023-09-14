@@ -32,6 +32,17 @@
     --secondary-color-font: #444444;
     --accent-color-font: #333333;
 
+
+    --reseda-green: #878159ff;
+    --battleship-gray: #949186ff;
+    --silver: #C9CAC6ff;
+    --licorice: #281715ff;
+    --bistre: #322522ff;
+    --pearl: #E1D5B8ff;
+    --ecru: #C9BA93ff;
+    --umber: #706051ff;
+    --licorice-2: #2B1D19ff;
+    --coffee: #694F34ff;
 }
 
 * {
@@ -55,6 +66,9 @@ html {
     justify-content: space-between;
     align-items: center;
     background: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    // box-shadow: 0 0 8px 8px white inset;
     z-index: 1000;
 
     .logo {
@@ -116,103 +130,117 @@ html {
 
 .hero{
     // padding: 0 8%;
-    padding-top: 8%;
+    // padding-top: 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    color: wheat;
 
     .home{
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: var(--primary-color); 
-        z-index: -2;
+        background: url(../img/home-bg-new.jpg); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;    
         transition: .5s;
 
-        img, .home-bg{
+        position: relative;
+        z-index: -1;
+        
+
+        .blur {
             position: absolute;
-            display: block;
+            backdrop-filter: blur(3px); // This be the blur
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+          }
+        .home-bg{
             width: 80%;
             height: 70vh;
-            z-index: -1;
-            border-radius: 47% 53% 53% 47% / 30% 62% 38% 70% ;
-            // opacity: 0.7;
-            filter: blur(5px);
-            background: var(--accent-color);
-            animation: blobEffect 15s ease-in-out infinite;
-            transition: all 1s easy-in-out;
+            background: url(../img/home-bg-new.jpg); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
 
-            //Tlo w srodku ramki rozmyte przeswitujace
-            //background-color: rgba(0, 0, 0, 0.1);
-            //backdrop-filter: blur(5px);
-            //box-shadow: 0 0 8px 8px white inset;
-        }
-
-        .home-content-container{
-            width: 100%;
-            height: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
+
             
-            .home-content-left{
-                width: 380px;
-                padding: 1%;
-
-                // Tlo w srodku ramki rozmyte przeswitujace
-                // background-color: rgba(0, 0, 0, 0.5);
-                // backdrop-filter: blur(5px);
-                // border:0.5px solid rgb(209, 209, 209);
-                // border-radius: 10%;
-                h1{
-                    font-size: 48px;
-                }
-                p{
-                    font-size: 24px;
-                }
-                span{
-                    font-size: 654px;
-                }
-            }
-
-            .home-content-right{
-                width: 200px;
-                height: 100px;
-                padding: 1%;
+            .home-content-container{
+                width: 100%;
+                height: 100%;
                 display: flex;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                position: relative;
-                text-align: center;
-                
-                .h1-container-1{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
 
+                .blur2{
+                    background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
+                    backdrop-filter: blur(8px); // This be the blur
+                    height: 100%;
+                    width: 50%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                .home-content-left{
+                    width: 80%;
+                    padding: 1%;
                     h1{
-                        line-height:6px;
-                        height: 35px;
-                        font-size: 64px;
+                        font-size: 56px;
+                    }
+                    p{
+                        font-size: 32px;
                     }
                 }
-                .h1-container-2{
+    
+                .home-content-right{
+                    width: 200px;
+                    height: 100px;
+                    padding: 1%;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-
-                    h1{
-                        font-size: 40px;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    position: relative;
+                    text-align: center;
+                    
+                    .h1-container-1{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+    
+                        h1{
+                            line-height:6px;
+                            height: 35px;
+                            font-size: 64px;
+                        }
                     }
-                }
-                p{
-                    font-size: 24px;
+                    .h1-container-2{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+    
+                        h1{
+                            font-size: 40px;
+                        }
+                    }
+                    p{
+                        font-size: 24px;
+                    }
                 }
             }
         }
+
+        
     }
 
     .about-us{
@@ -223,6 +251,7 @@ html {
         justify-content: center;
         align-items: center;
         transition: .5s;
+        background: var(--pearl);
 
         .about-us-box{
             display: flex;
@@ -262,10 +291,11 @@ html {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        background: var(--pearl);
         
         .modal {
             width: 80%;
-            height: 550px;
+            height: 80vh;
             position: fixed;
             z-index: 10;
             display: none;
@@ -283,9 +313,9 @@ html {
                 animation: marquee 16s linear infinite;
             
                 img{
-                    background: red;
-                    width: 400px;
-                    height: 500px;
+                    // background: red;
+                    width: 500px;
+                    height: 600px;
                     padding: 0 16px;
                 }
             }

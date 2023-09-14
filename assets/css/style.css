@@ -20,6 +20,16 @@
   --primiray-color-font: #FFFFFF;
   --secondary-color-font: #444444;
   --accent-color-font: #333333;
+  --reseda-green: #878159ff;
+  --battleship-gray: #949186ff;
+  --silver: #C9CAC6ff;
+  --licorice: #281715ff;
+  --bistre: #322522ff;
+  --pearl: #E1D5B8ff;
+  --ecru: #C9BA93ff;
+  --umber: #706051ff;
+  --licorice-2: #2B1D19ff;
+  --coffee: #694F34ff;
 }
 
 * {
@@ -44,6 +54,8 @@ html {
   justify-content: space-between;
   align-items: center;
   background: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
   z-index: 1000;
 }
 .header .logo img {
@@ -98,55 +110,72 @@ html {
 }
 
 .hero {
-  padding-top: 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  color: wheat;
 }
 .hero .home {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primary-color);
-  z-index: -2;
+  background: url(../img/home-bg-new.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   transition: 0.5s;
+  position: relative;
+  z-index: -1;
 }
-.hero .home img, .hero .home .home-bg {
+.hero .home .blur {
   position: absolute;
-  display: block;
+  backdrop-filter: blur(3px);
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+.hero .home .home-bg {
   width: 80%;
   height: 70vh;
-  z-index: -1;
-  border-radius: 47% 53% 53% 47%/30% 62% 38% 70%;
-  filter: blur(5px);
-  background: var(--accent-color);
-  animation: blobEffect 15s ease-in-out infinite;
-  transition: all 1s easy-in-out;
+  background: url(../img/home-bg-new.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero .home .home-content-container {
+.hero .home .home-bg .home-content-container {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.hero .home .home-bg .home-content-container .blur2 {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.hero .home .home-content-container .home-content-left {
-  width: 380px;
+.hero .home .home-bg .home-content-container .home-content-left {
+  width: 80%;
   padding: 1%;
 }
-.hero .home .home-content-container .home-content-left h1 {
-  font-size: 48px;
+.hero .home .home-bg .home-content-container .home-content-left h1 {
+  font-size: 56px;
 }
-.hero .home .home-content-container .home-content-left p {
-  font-size: 24px;
+.hero .home .home-bg .home-content-container .home-content-left p {
+  font-size: 32px;
 }
-.hero .home .home-content-container .home-content-left span {
-  font-size: 654px;
-}
-.hero .home .home-content-container .home-content-right {
+.hero .home .home-bg .home-content-container .home-content-right {
   width: 200px;
   height: 100px;
   padding: 1%;
@@ -156,25 +185,25 @@ html {
   position: relative;
   text-align: center;
 }
-.hero .home .home-content-container .home-content-right .h1-container-1 {
+.hero .home .home-bg .home-content-container .home-content-right .h1-container-1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.hero .home .home-content-container .home-content-right .h1-container-1 h1 {
+.hero .home .home-bg .home-content-container .home-content-right .h1-container-1 h1 {
   line-height: 6px;
   height: 35px;
   font-size: 64px;
 }
-.hero .home .home-content-container .home-content-right .h1-container-2 {
+.hero .home .home-bg .home-content-container .home-content-right .h1-container-2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.hero .home .home-content-container .home-content-right .h1-container-2 h1 {
+.hero .home .home-bg .home-content-container .home-content-right .h1-container-2 h1 {
   font-size: 40px;
 }
-.hero .home .home-content-container .home-content-right p {
+.hero .home .home-bg .home-content-container .home-content-right p {
   font-size: 24px;
 }
 .hero .about-us {
@@ -185,6 +214,7 @@ html {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  background: var(--pearl);
 }
 .hero .about-us .about-us-box {
   display: flex;
@@ -219,10 +249,11 @@ html {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background: var(--pearl);
 }
 .hero .realization .modal {
   width: 80%;
-  height: 550px;
+  height: 80vh;
   position: fixed;
   z-index: 10;
   display: none;
@@ -240,9 +271,8 @@ html {
   animation: marquee 16s linear infinite;
 }
 .hero .realization .modal .modal-content img {
-  background: red;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   padding: 0 16px;
 }
 .hero .realization .realization-box {
