@@ -49,7 +49,7 @@ html {
 .header {
   position: fixed;
   width: 100%;
-  padding: 2% 4%;
+  padding: 1% 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +78,7 @@ html {
   animation-delay: calc(0.2s * var(--i));
 }
 .header .navlist a:hover {
-  color: rgb(109, 36, 109);
+  color: rgb(255, 255, 255);
   border-bottom: 2px solid white;
 }
 .header .icons-header {
@@ -93,7 +93,7 @@ html {
   animation-delay: calc(0.2s * var(--i));
 }
 .header .icons-header i:hover {
-  color: rgb(109, 36, 109);
+  color: rgb(255, 255, 255);
 }
 .header .icons-header .i-wrapper {
   transition: 0.5s;
@@ -158,7 +158,7 @@ html {
 }
 .hero .home .home-bg .home-content-container .blur2 {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   height: 100%;
   width: 50%;
   display: flex;

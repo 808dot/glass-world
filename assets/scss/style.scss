@@ -61,7 +61,7 @@ html {
 .header{
     position: fixed;
     width: 100%;
-    padding: 2% 4%;
+    padding: 1% 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +93,7 @@ html {
             animation-delay: calc(.2s * var(--i));
         }
         a:hover{
-            color: rgb(109, 36, 109);
+            color: rgba(255, 255, 255, 1);
             border-bottom: 2px solid white;
         }
     }
@@ -109,7 +109,7 @@ html {
             animation-delay: calc(.2s * var(--i));
         }
         i:hover{
-            color: rgb(109, 36, 109);
+           color: rgba(255, 255, 255, 1);
         }
         .i-wrapper{
             transition: .5s;
@@ -183,7 +183,7 @@ html {
 
                 .blur2{
                     background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
-                    backdrop-filter: blur(8px); // This be the blur
+                    backdrop-filter: blur(6px); // This be the blur
                     height: 100%;
                     width: 50%;
 
