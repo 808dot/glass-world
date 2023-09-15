@@ -121,6 +121,10 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center center;
+  -webkit-background-attachment: fixed;
 }
 .hero .home {
   width: 100%;
@@ -137,6 +141,9 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,6 +227,7 @@ html {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
   border-radius: 10%;
   opacity: 0;
@@ -237,6 +245,7 @@ html {
   height: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
   opacity: 0;
   animation: slideBottom 2s ease forwards;
@@ -265,6 +274,7 @@ html {
   animation: showModalFromTop 0.8s ease normal;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
   border-radius: 10%;
   border: none;
@@ -322,6 +332,7 @@ html {
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
 }
 .hero .contact .contact-form ::placeholder {
