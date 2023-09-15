@@ -1,4 +1,12 @@
 :root {
+  --scrool-top: 0px;
+  --font-size-navbar: 24px;
+  --font-size-icon: 40px;
+  --font-size-home-h1: 56px;
+  --font-size-home-p: 32px;
+  --font-size-aboutus-h1: 32px;
+  --font-size-aboutus-p: 16px;
+  --font-size-realization-p: 40px;
   --hookers-green: #517D75ff;
   --black: #030707ff;
   --cambridge-blue: #84AAA2ff;
@@ -70,7 +78,7 @@ html {
   display: inline-block;
   margin-left: 32px;
   border-bottom: 2px solid transparent;
-  font-size: 24px;
+  font-size: var(--font-size-navbar);
   transition: 0.5s;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
@@ -85,7 +93,7 @@ html {
 }
 .header .icons-header i {
   margin: 0px 8px;
-  font-size: 40px;
+  font-size: var(--font-size-icon);
   transition: 0.5s;
   opacity: 0;
   animation: slideTop 1s ease forwards;
@@ -99,13 +107,6 @@ html {
 }
 .header .icons-header .i-wrapper:hover {
   transform: translateY(-8px);
-}
-.header .button-menu {
-  display: none;
-  font-size: 36px;
-  cursor: pointer;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 0.8s;
 }
 
 .hero {
@@ -162,10 +163,10 @@ html {
   animation: slideRight 2s ease forwards;
 }
 .hero .home .home-bg .home-content-container .home-content-left h1 {
-  font-size: 56px;
+  font-size: var(--font-size-home-h1);
 }
 .hero .home .home-bg .home-content-container .home-content-left p {
-  font-size: 32px;
+  font-size: var(--font-size-home-p);
 }
 .hero .home .home-bg .home-content-container .home-content-right {
   width: 200px;
@@ -206,6 +207,7 @@ html {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  scroll-margin-top: var(--scrool-top);
 }
 .hero .about-us .about-us-box {
   display: flex;
@@ -222,6 +224,12 @@ html {
   opacity: 0;
   animation: slideTop 2s ease forwards;
   animation-delay: calc(0.2s * var(--i));
+}
+.hero .about-us .about-us-box h1 {
+  font-size: var(--font-size-aboutus-h1);
+}
+.hero .about-us .about-us-box p {
+  font-size: var(--font-size-aboutus-p);
 }
 .hero .about-us .line {
   width: 80px;
@@ -240,9 +248,10 @@ html {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  scroll-margin-top: var(--scrool-top);
 }
 .hero .realization .modal {
-  width: 80%;
+  width: 90%;
   height: 80vh;
   position: fixed;
   z-index: 10;
@@ -289,8 +298,10 @@ html {
   cursor: pointer;
 }
 .hero .realization .realization-box p {
-  background-color: 0;
   position: absolute;
+  font-size: var(--font-size-realization-p);
+  text-align: center;
+  font-weight: 400;
 }
 .hero .contact {
   width: 100%;
@@ -298,6 +309,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: var(--scrool-top);
 }
 .hero .contact .contact-form {
   padding: 1%;
@@ -315,7 +327,8 @@ html {
   color: rgb(27, 19, 12);
   font-size: 16px;
 }
-.hero .contact .contact-form h1 {
+.hero .contact .contact-form h1, .hero .contact .contact-form i {
+  font-size: 32px;
   margin-right: auto;
 }
 .hero .contact .contact-form .contact-name-email-box {
@@ -352,4 +365,143 @@ html {
   width: 100px;
   height: 50px;
   margin-left: auto;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgb(225, 213, 184);
+  transition: 0.5s;
+}
+.hero .contact .contact-form #fbutton:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1440px) {
+  .hero .home {
+    padding-top: 8%;
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    --scrool-top: 0px;
+    --font-size-navbar: 24px;
+    --font-size-icon: 40px;
+    --font-size-home-h1: 40px;
+    --font-size-home-p: 24px;
+    --font-size-aboutus-h1: 24px;
+    --font-size-aboutus-p: 14px;
+    --font-size-realization-p: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .header .navlist {
+    display: none;
+  }
+  .hero .about-us {
+    height: 800px;
+    flex-direction: column;
+  }
+  .hero .about-us .about-us-box {
+    width: 50%;
+    height: 200px;
+    animation: slideRight 2s ease forwards;
+  }
+  .hero .about-us .line {
+    width: 10px;
+    height: 80px;
+    animation: slideLeft 2s ease forwards;
+  }
+  .hero .contact {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: var(--scrool-top);
+  }
+  .hero .contact .contact-form {
+    padding: 1%;
+    width: 80%;
+    height: 400px;
+  }
+  .hero .contact .contact-form #fmessage {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --scrool-top: 0px;
+    --font-size-navbar: 24px;
+    --font-size-icon: 40px;
+    --font-size-home-h1: 30px;
+    --font-size-home-p: 20px;
+    --font-size-aboutus-h1: 30px;
+    --font-size-aboutus-p: 16px;
+    --font-size-realization-p: 24px;
+  }
+  .hero .about-us {
+    height: 1000px;
+    flex-direction: column;
+  }
+  .hero .about-us .about-us-box {
+    width: 70%;
+    height: 250px;
+    animation: slideRight 2s ease forwards;
+  }
+  .hero .about-us .line {
+    width: 10px;
+    height: 80px;
+    animation: slideLeft 2s ease forwards;
+  }
+  .hero .realization {
+    height: 1600px;
+    justify-content: space-evenly;
+  }
+  .hero .realization .modal {
+    width: 80%;
+  }
+  .hero .realization .modal .modal-content img {
+    width: 400px;
+    height: 500px;
+  }
+  .hero .realization .realization-box {
+    width: 40%;
+    height: 300px;
+  }
+  .hero .realization .realization-box img {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --scrool-top: 0px;
+    --font-size-navbar: 24px;
+    --font-size-icon: 40px;
+    --font-size-home-h1: 24px;
+    --font-size-home-p: 18px;
+    --font-size-aboutus-h1: 24px;
+    --font-size-aboutus-p: 16px;
+    --font-size-realization-p: 24px;
+  }
+  .hero .realization {
+    height: 1400px;
+    justify-content: space-evenly;
+  }
+  .hero .realization .modal {
+    width: 80%;
+  }
+  .hero .realization .modal .modal-content img {
+    width: 400px;
+    height: 500px;
+  }
+  .hero .realization .realization-box {
+    width: 45%;
+    height: 240px;
+  }
+  .hero .realization .realization-box img {
+    width: 100%;
+    height: 240px;
+  }
 }/*# sourceMappingURL=style.css.map */
