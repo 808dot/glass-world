@@ -487,7 +487,7 @@ html {
     }
     .hero{
         .about-us{
-            height: 900px;
+            height: 1000px;
             flex-direction: column;
 
             .about-us-box{
@@ -496,7 +496,7 @@ html {
                 height: 200px;
 
 
-                animation: slideRight 2s ease forwards;
+                // animation: slideRight 2s ease forwards;
 
                 
             }
@@ -504,7 +504,7 @@ html {
                 width: 10px;
                 height: 80px;
                 
-                animation: slideLeft 2s ease forwards;
+                // animation: slideLeft 2s ease forwards;
             }
             
         }
@@ -697,8 +697,7 @@ html {
         }
         .about-us{
             // background-color: rebeccapurple;
-            justify-content: start;
-            height: 800px;
+            height: 850px;
             .about-us-box{
                 width: 70%;
                 height: 200px;

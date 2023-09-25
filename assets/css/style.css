@@ -353,18 +353,16 @@ html {
     display: none;
   }
   .hero .about-us {
-    height: 900px;
+    height: 1000px;
     flex-direction: column;
   }
   .hero .about-us .about-us-box {
     width: 50%;
     height: 200px;
-    animation: slideRight 2s ease forwards;
   }
   .hero .about-us .line {
     width: 10px;
     height: 80px;
-    animation: slideLeft 2s ease forwards;
   }
   .hero .contact {
     width: 100%;
@@ -495,8 +493,7 @@ html {
     font-size: var(--font-size-home-p);
   }
   .hero .about-us {
-    justify-content: start;
-    height: 800px;
+    height: 850px;
   }
   .hero .about-us .about-us-box {
     width: 70%;

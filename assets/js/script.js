@@ -51,49 +51,96 @@ root.style.setProperty('--scrool-top', scrool_top + "px");
 
 
 
+let windowWidth = window.innerWidth;
+console.log(windowWidth);
 
 
+if (windowWidth > '768'){
+  const animationItemsBox = document.querySelectorAll('.about-us-box');
 
-const animationItemsBox = document.querySelectorAll('.about-us-box');
+  const observerBox = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("The element is intersecting >");
+          entry.target.style.animation = `slideTop 2s ${entry.target.dataset.delay} ease forwards`;
+        } else {
+            entry.target.style.animation="none";
+        }
+      })
+    },
 
-const observerBox = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        console.log("The element is intersecting >");
-        entry.target.style.animation = `slideTop 2s ${entry.target.dataset.delay} ease forwards`;
-      } else {
-          entry.target.style.animation="none";
-      }
-    })
-  },
+  )
 
-)
-
-animationItemsBox.forEach(item => {
-  observerBox.observe(item)         
-})
+  animationItemsBox.forEach(item => {
+    observerBox.observe(item)         
+  })
 
 
-const animationItemsLine = document.querySelectorAll('.line');
+  const animationItemsLine = document.querySelectorAll('.line');
 
-const observerLine = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        console.log("The element is intersecting >");
-        entry.target.style.animation = `slideBottom 2s ${entry.target.dataset.delay} ease forwards`;
-      } else {
-          entry.target.style.animation="none";
-      }
-    })
-  },
+  const observerLine = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("The element is intersecting >");
+          entry.target.style.animation = `slideBottom 2s ${entry.target.dataset.delay} ease forwards`;
+        } else {
+            entry.target.style.animation="none";
+        }
+      })
+    },
 
-)
+  )
 
-animationItemsLine.forEach(item => {
-  observerLine.observe(item)         
-})
+  animationItemsLine.forEach(item => {
+    observerLine.observe(item)         
+  })
+}
+else{
+  const animationItemsBox = document.querySelectorAll('.about-us-box');
+
+  const observerBox = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("The element is intersecting >");
+          entry.target.style.animation = `slideLeft 2s  ease forwards`;
+        } else {
+            entry.target.style.animation="none";
+        }
+      })
+    },
+
+  )
+
+  animationItemsBox.forEach(item => {
+    observerBox.observe(item)         
+  })
+
+
+  const animationItemsLine = document.querySelectorAll('.line');
+
+  const observerLine = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log("The element is intersecting >");
+          entry.target.style.animation = `slideRight 2s  ease forwards`;
+        } else {
+            entry.target.style.animation="none";
+        }
+      })
+    },
+
+  )
+
+  animationItemsLine.forEach(item => {
+    observerLine.observe(item)         
+  })
+}
+
+
 
 
 
