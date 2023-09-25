@@ -7,44 +7,15 @@
   --font-size-aboutus-h1: 32px;
   --font-size-aboutus-p: 16px;
   --font-size-realization-p: 40px;
-  --hookers-green: #517D75ff;
+  --font-size-contact-h1i: 32px;
+  --font-size-placeholder: 16px;
   --black: #030707ff;
-  --cambridge-blue: #84AAA2ff;
-  --hookers-green-2: #4A6D67ff;
-  --verdigris: #6CB1A7ff;
-  --dark-slate-gray: #7ce2d5;
-  --deep-blue: #2E86AB;
-  --pale-green: #A4C3B2;
-  --golden-yellow: #F6AE2D;
-  --mint-green: #57CC99;
-  --light-gray-blue: #E8F1F2;
-  --coral-red: #FF6B6B;
-  --charcoal-gray:#333333;
-  --light-gray:#D9D9D9;
-  --gold: #FFD700;
-  --primary-color: #0077B6;
-  --secondary-color: #FF6B6B;
-  --accent-color: #4CAF50;
-  --primiray-color-font: #FFFFFF;
-  --secondary-color-font: #444444;
-  --accent-color-font: #333333;
-  --reseda-green: #878159ff;
-  --battleship-gray: #949186ff;
-  --silver: #C9CAC6ff;
-  --licorice: #281715ff;
-  --bistre: #322522ff;
-  --pearl: rgb(225, 213, 184);
-  --ecru: #C9BA93ff;
-  --umber: rgb(112, 96, 82);
-  --licorice-2: #2B1D19ff;
-  --coffee: #694F34ff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Code Pro", monospace;
   list-style: none;
   text-decoration: none;
   color: var(--black);
@@ -64,6 +35,7 @@ html {
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  font-family: "Source Code Pro", monospace;
   z-index: 1000;
 }
 .header .logo img {
@@ -116,6 +88,7 @@ html {
   align-items: center;
   flex-direction: column;
   color: wheat;
+  font-family: "Source Code Pro", monospace;
   background: url(../img/home-bg-new.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,6 +121,7 @@ html {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
+  animation: slideBottom 2s ease forwards;
 }
 .hero .home .home-bg .home-content-container {
   width: 100%;
@@ -157,55 +131,27 @@ html {
   align-items: center;
 }
 .hero .home .home-bg .home-content-container .blur2 {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(6px);
   height: 100%;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .hero .home .home-bg .home-content-container .home-content-left {
   width: 80%;
   padding: 1%;
+  opacity: 0;
   animation: slideRight 2s ease forwards;
+  animation-delay: 0.2s;
 }
 .hero .home .home-bg .home-content-container .home-content-left h1 {
   font-size: var(--font-size-home-h1);
 }
 .hero .home .home-bg .home-content-container .home-content-left p {
   font-size: var(--font-size-home-p);
-}
-.hero .home .home-bg .home-content-container .home-content-right {
-  width: 200px;
-  height: 100px;
-  padding: 1%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  position: relative;
-  text-align: center;
-}
-.hero .home .home-bg .home-content-container .home-content-right .h1-container-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.hero .home .home-bg .home-content-container .home-content-right .h1-container-1 h1 {
-  line-height: 6px;
-  height: 35px;
-  font-size: 64px;
-}
-.hero .home .home-bg .home-content-container .home-content-right .h1-container-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.hero .home .home-bg .home-content-container .home-content-right .h1-container-2 h1 {
-  font-size: 40px;
-}
-.hero .home .home-bg .home-content-container .home-content-right p {
-  font-size: 24px;
 }
 .hero .about-us {
   width: 100%;
@@ -218,12 +164,13 @@ html {
   scroll-margin-top: var(--scrool-top);
 }
 .hero .about-us .about-us-box {
+  width: 25%;
+  height: 300px;
+  padding: 0 2%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  width: 25%;
-  height: 300px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
@@ -231,8 +178,6 @@ html {
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
   border-radius: 10%;
   opacity: 0;
-  animation: slideTop 2s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
 }
 .hero .about-us .about-us-box h1 {
   font-size: var(--font-size-aboutus-h1);
@@ -248,8 +193,6 @@ html {
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0px 0px 24px 8px rgb(225, 213, 184);
   opacity: 0;
-  animation: slideBottom 2s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
 }
 .hero .realization {
   width: 100%;
@@ -258,15 +201,16 @@ html {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-family: "Permanent Marker", cursive;
   scroll-margin-top: var(--scrool-top);
 }
 .hero .realization .modal {
   width: 90%;
   height: 80vh;
+  align-items: center;
   position: fixed;
   z-index: 10;
   display: none;
-  align-items: center;
   overflow: clip;
   top: 55%;
   left: 50%;
@@ -286,8 +230,7 @@ html {
   animation: marquee 16s linear infinite;
 }
 .hero .realization .modal .modal-content img {
-  width: 500px;
-  height: 600px;
+  height: 70vh;
   padding: 0 16px;
 }
 .hero .realization .realization-box {
@@ -324,7 +267,7 @@ html {
 }
 .hero .contact .contact-form {
   padding: 1%;
-  width: 64%;
+  width: 80%;
   height: 500px;
   display: flex;
   justify-content: space-evenly;
@@ -337,10 +280,10 @@ html {
 }
 .hero .contact .contact-form ::placeholder {
   color: rgb(27, 19, 12);
-  font-size: 16px;
+  font-size: var(--font-size-placeholder);
 }
 .hero .contact .contact-form h1, .hero .contact .contact-form i {
-  font-size: 32px;
+  font-size: var(--font-size-contact-h1i);
   margin-right: auto;
 }
 .hero .contact .contact-form .contact-name-email-box {
@@ -350,7 +293,7 @@ html {
   justify-content: space-between;
 }
 .hero .contact .contact-form .contact-name-email-box #fname, .hero .contact .contact-form .contact-name-email-box #femail {
-  padding: 13px;
+  padding: 1%;
   border: 1px solid rgb(225, 213, 184);
   width: 49%;
   height: 40px;
@@ -362,7 +305,7 @@ html {
   outline: none;
 }
 .hero .contact .contact-form #fmessage {
-  padding: 13px;
+  padding: 1%;
   border: 1px solid rgb(225, 213, 184);
   width: 100%;
   height: 300px;
@@ -410,7 +353,7 @@ html {
     display: none;
   }
   .hero .about-us {
-    height: 800px;
+    height: 900px;
     flex-direction: column;
   }
   .hero .about-us .about-us-box {
@@ -451,6 +394,7 @@ html {
     --font-size-aboutus-h1: 30px;
     --font-size-aboutus-p: 16px;
     --font-size-realization-p: 24px;
+    --font-size-placeholder: 12px;
   }
   .hero .about-us {
     height: 1000px;
@@ -496,6 +440,7 @@ html {
     --font-size-aboutus-h1: 24px;
     --font-size-aboutus-p: 16px;
     --font-size-realization-p: 24px;
+    --font-size-contact-h1i: 24px ;
   }
   .hero .realization {
     height: 1400px;
@@ -515,5 +460,46 @@ html {
   .hero .realization .realization-box img {
     width: 100%;
     height: 240px;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --scrool-top: 0px;
+    --font-size-navbar: 24px;
+    --font-size-icon: 32px;
+    --font-size-home-h1: 20px;
+    --font-size-home-p: 14px;
+    --font-size-aboutus-h1: 20px;
+    --font-size-aboutus-p: 12px;
+    --font-size-realization-p: 20px;
+  }
+  .header img {
+    height: 64px;
+  }
+  .hero .home .home-bg .home-content-container {
+    align-items: end;
+  }
+  .hero .home .home-bg .home-content-container .blur2 {
+    height: 30%;
+    width: 100%;
+  }
+  .hero .home .home-bg .home-content-container .home-content-left {
+    width: 80%;
+    padding: 1%;
+    animation: slideRight 2s ease forwards;
+  }
+  .hero .home .home-bg .home-content-container .home-content-left h1 {
+    font-size: var(--font-size-home-h1);
+  }
+  .hero .home .home-bg .home-content-container .home-content-left p {
+    font-size: var(--font-size-home-p);
+  }
+  .hero .about-us {
+    justify-content: start;
+    height: 800px;
+  }
+  .hero .about-us .about-us-box {
+    width: 70%;
+    height: 200px;
   }
 }/*# sourceMappingURL=style.css.map */

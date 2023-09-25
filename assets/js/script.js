@@ -48,3 +48,124 @@ let root = document.querySelector(':root');
 let scrool_top = parseInt(header.offsetHeight) + 2 * parseInt(header_padding.paddingTop);
 
 root.style.setProperty('--scrool-top', scrool_top + "px");
+
+
+
+
+
+
+const animationItemsBox = document.querySelectorAll('.about-us-box');
+
+const observerBox = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("The element is intersecting >");
+        entry.target.style.animation = `slideTop 2s ${entry.target.dataset.delay} ease forwards`;
+      } else {
+          entry.target.style.animation="none";
+      }
+    })
+  },
+
+)
+
+animationItemsBox.forEach(item => {
+  observerBox.observe(item)         
+})
+
+
+const animationItemsLine = document.querySelectorAll('.line');
+
+const observerLine = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("The element is intersecting >");
+        entry.target.style.animation = `slideBottom 2s ${entry.target.dataset.delay} ease forwards`;
+      } else {
+          entry.target.style.animation="none";
+      }
+    })
+  },
+
+)
+
+animationItemsLine.forEach(item => {
+  observerLine.observe(item)         
+})
+
+
+
+// const callback = (entries) => {
+
+//    entries.forEach((entry) => {
+//            if (entry.isIntersecting) {
+//                console.log("The element is intersecting >");
+//                entry.target.style.animation = 
+//                entry.target.dataset.animate;
+//            } else {
+//                entry.target.style.animation="none";
+//            }
+//        }
+//    );       
+// }
+
+
+
+// let observer2 = new IntersectionObserver(callback);
+
+// const animationItems2 = document.querySelectorAll('.about-us-box');
+
+// animationItems2.forEach(item => {
+//   observer2.observe(item)         
+// })
+
+
+
+// const callback = (entries) => {
+//   //Step 4
+//   // The entries variable will contain the list of
+//   // elements that you are observing. When ever 
+//   // intersection occurs, you need to do forEach loop 
+//   // to find which one intersected. 
+//   // For this we check a flag on the element called "isIntersecting"
+//    entries.forEach(
+//        (entry) => {
+//            if (entry.isIntersecting) {
+//                console.log("The element is intersecting >");
+//                //If intersecting then attach keyframe animation.
+//               //We do this by assigning the data attribute 
+//               //we coded in the markup to the style.animation 
+//               //of the element
+              
+//                entry.target.style.animation = 
+//                entry.target.dataset.animate;
+//            } else {
+//                //We take of the animation if not in view
+//                entry.target.style.animation="none";
+//            }
+//        }
+//    );       
+// }
+
+// //1] Create a new intersectionObserver object, 
+// //which will accept a callback function as 
+// //a parameter.
+
+// let observer = new IntersectionObserver(callback);
+
+
+// //2]Select all elements that have ".animate" 
+// //class.In our case we have three 
+// //elements (.image,<p> and h<2>).
+
+// const animationItems = document.querySelectorAll('.about-us-box');
+
+
+//  //3]Loop through selected elements and add to the
+//  //observer watch list.      
+
+//  animationItems.forEach(item => {
+//    observer.observe(item)         
+// })

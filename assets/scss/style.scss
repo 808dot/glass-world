@@ -11,60 +11,27 @@
 
     --font-size-realization-p: 40px;
     
+    --font-size-contact-h1i: 32px;
+    --font-size-placeholder: 16px;
 
-
-
-    --hookers-green: #517D75ff;
     --black: #030707ff;
-    --cambridge-blue: #84AAA2ff;
-    --hookers-green-2: #4A6D67ff;
-    --verdigris: #6CB1A7ff;
-    --dark-slate-gray: #7ce2d5;
-
-    // Cool and Elegant
-    --deep-blue: #2E86AB;
-    --pale-green: #A4C3B2;
-    --golden-yellow: #F6AE2D;
-
-    //Fresh and Modern
-    --mint-green: #57CC99;
-    --light-gray-blue: #E8F1F2;
-    --coral-red: #FF6B6B;
-    
-    //Industrial and Sleek
-
-    --charcoal-gray:#333333;
-    --light-gray:#D9D9D9;
-    --gold: #FFD700;
-
-
-    // 60 30 10
-    --primary-color: #0077B6;
-    --secondary-color: #FF6B6B;
-    --accent-color: #4CAF50; 
-
-    --primiray-color-font: #FFFFFF;
-    --secondary-color-font: #444444;
-    --accent-color-font: #333333;
-
-
-    --reseda-green: #878159ff;
-    --battleship-gray: #949186ff;
-    --silver: #C9CAC6ff;
-    --licorice: #281715ff;
-    --bistre: #322522ff;
-    --pearl: rgb(225, 213, 184);
-    --ecru: #C9BA93ff;
-    --umber: rgb(112, 96, 82);
-    --licorice-2: #2B1D19ff;
-    --coffee: #694F34ff;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace;
+    //  font-family: 'Lato', sans-serif;
+    // font-family: 'Merriweather', serif;
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Permanent Marker', cursive;
+    // font-family: 'Playfair Display', serif;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto Slab', serif;
+    // font-family: 'Source Code Pro', monospace; 
     list-style: none;
     text-decoration: none;
     color: var(--black);
@@ -85,6 +52,7 @@ html {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 
+    font-family: 'Source Code Pro', monospace; 
     z-index: 1000;
 
     .logo {
@@ -153,6 +121,8 @@ html {
     flex-direction: column;
     color: wheat;
 
+    font-family: 'Source Code Pro', monospace; 
+
     background: url(../img/home-bg-new.png); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -163,8 +133,6 @@ html {
     -webkit-background-repeat: no-repeat;
     -webkit-background-position: center center;   
     -webkit-background-attachment: fixed;
-
-    
 
     .home{
         width: 100%;
@@ -191,6 +159,8 @@ html {
             align-items: center;
 
             box-shadow: 0px 0px 24px 8px rgba(225, 213, 184, 1);
+
+            animation: slideBottom 2s ease forwards;
             
             .home-content-container{
                 width: 100%;
@@ -200,21 +170,22 @@ html {
                 align-items: center;
 
                 .blur2{
-                    background: rgba(255, 255, 255, 0.2); // Make sure this color has an opacity of less than 1
-                    backdrop-filter: blur(6px); // This be the blur
                     height: 100%;
                     width: 50%;
-
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     
+                    background: rgba(255, 255, 255, 0.2); 
+                    backdrop-filter: blur(6px); 
+                    -webkit-backdrop-filter: blur(6px);
                 }
                 .home-content-left{
                     width: 80%;
                     padding: 1%;
-
+                    opacity: 0;
                     animation: slideRight 2s ease forwards;
+                    animation-delay: 0.2s;
                     h1{
                         font-size: var(--font-size-home-h1);
                     }
@@ -223,40 +194,40 @@ html {
                     }
                 }
     
-                .home-content-right{
-                    width: 200px;
-                    height: 100px;
-                    padding: 1%;
-                    display: flex;
-                    justify-content: space-evenly;
-                    flex-wrap: wrap;
-                    position: relative;
-                    text-align: center;
+                // .home-content-right{
+                //     width: 200px;
+                //     height: 100px;
+                //     padding: 1%;
+                //     display: flex;
+                //     justify-content: space-evenly;
+                //     flex-wrap: wrap;
+                //     position: relative;
+                //     text-align: center;
                     
-                    .h1-container-1{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-end;
+                //     .h1-container-1{
+                //         display: flex;
+                //         flex-direction: column;
+                //         justify-content: flex-end;
     
-                        h1{
-                            line-height:6px;
-                            height: 35px;
-                            font-size: 64px;
-                        }
-                    }
-                    .h1-container-2{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-end;
+                //         h1{
+                //             line-height:6px;
+                //             height: 35px;
+                //             font-size: 64px;
+                //         }
+                //     }
+                //     .h1-container-2{
+                //         display: flex;
+                //         flex-direction: column;
+                //         justify-content: flex-end;
     
-                        h1{
-                            font-size: 40px;
-                        }
-                    }
-                    p{
-                        font-size: 24px;
-                    }
-                }
+                //         h1{
+                //             font-size: 40px;
+                //         }
+                //     }
+                //     p{
+                //         font-size: 24px;
+                //     }
+                // }
             }
         }
 
@@ -270,29 +241,31 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+
         transition: .5s;
-        // background: var(#C9CAC6ff);
         scroll-margin-top: var(--scrool-top);
 
+
         .about-us-box{
+            width: 25%;
+            height: 300px;
+            padding: 0 2%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
-            width: 25%;
-            height: 300px;
+            
             text-align: center;
 
             background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
-            // border:0.5px solid rgb(209, 209, 209);
             box-shadow: 0px 0px 24px 8px rgba(225, 213, 184, 1);
             border-radius: 10%;
 
             opacity: 0;
-            animation: slideTop 2s ease forwards;
-            animation-delay: calc(.2s * var(--i));
+            // animation: slideTop 2s ease forwards;
+            // animation-delay: calc(.2s * var(--i));
 
             h1{
                 font-size: var(--font-size-aboutus-h1);
@@ -304,14 +277,13 @@ html {
         .line{
             width: 80px;
             height: 10px;
-            // background-color: rgba(255, 255, 255, 0.2);
             background-color: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             box-shadow: 0px 0px 24px 8px rgba(225, 213, 184, 1);
             opacity: 0;
-            animation: slideBottom 2s ease forwards;
-            animation-delay: calc(.2s * var(--i));
+            // animation: slideBottom 2s ease forwards;
+            // animation-delay: calc(.2s * var(--i));
         }
         
     }
@@ -323,16 +295,20 @@ html {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        font-family: 'Permanent Marker', cursive;
         scroll-margin-top: var(--scrool-top);
         
         .modal {
             width: 90%;
             height: 80vh;
+            align-items: center;
             position: fixed;
+            
             z-index: 10;
             display: none;
-            align-items: center;
+            
             overflow: clip;
+
             top: 55%;
             left: 50%;
             translate: -50% -50%;
@@ -341,7 +317,6 @@ html {
             background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
-            // border:0.5px solid rgb(209, 209, 209);
             box-shadow: 0px 0px 24px 8px rgba(225, 213, 184, 1);
             border-radius: 10%;
             border: none;
@@ -353,8 +328,8 @@ html {
                 animation: marquee 16s linear infinite;
             
                 img{
-                    width: 500px;
-                    height: 600px;
+                    // width: 500px;
+                    height: 70vh;
                     padding: 0 16px;
                 }
             }
@@ -394,31 +369,28 @@ html {
         justify-content: center;
         align-items: center;
         scroll-margin-top: var(--scrool-top);
-        
 
         .contact-form{
             padding: 1%;
-            width: 64%;
+            width: 80%;
             height: 500px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
-            // border: 2px solid black;
 
             background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
-            // border:0.5px solid rgb(209, 209, 209);
             box-shadow: 0px 0px 24px 8px rgba(225, 213, 184, 1);
 
             ::placeholder{
                 color: rgb(27, 19, 12);
-                font-size: 16px;
+                font-size: var(--font-size-placeholder);
             }
 
             h1, i{
-                font-size: 32px;
+                font-size: var(--font-size-contact-h1i);
                 margin-right: auto;
             }
             .contact-name-email-box{
@@ -428,7 +400,7 @@ html {
                 justify-content: space-between;
 
                 #fname, #femail{
-                    padding: 13px;
+                    padding: 1%;
                     border: 1px solid rgb(225, 213, 184);
                     width: 49%;
                     height: 40px;
@@ -441,7 +413,7 @@ html {
                 }
             }
             #fmessage{
-                padding: 13px;
+                padding: 1%;
                 border: 1px solid rgb(225, 213, 184);
                 width:100%;
                 height: 300px;
@@ -515,7 +487,7 @@ html {
     }
     .hero{
         .about-us{
-            height: 800px;
+            height: 900px;
             flex-direction: column;
 
             .about-us-box{
@@ -571,9 +543,12 @@ html {
         --font-size-aboutus-p:  16px;
     
         --font-size-realization-p: 24px;
+        --font-size-placeholder: 12px;
     }
     
+
     .hero{
+        
         .about-us{
             height: 1000px;
             flex-direction: column;
@@ -636,6 +611,8 @@ html {
         --font-size-aboutus-p:  16px;
     
         --font-size-realization-p: 24px;
+
+        --font-size-contact-h1i: 24px
     }
 
     .hero{
@@ -669,7 +646,63 @@ html {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
 
+    :root{
+        --scrool-top: 0px;
+        --font-size-navbar: 24px;
+        --font-size-icon: 32px;
+    
+        --font-size-home-h1: 20px;
+        --font-size-home-p:  14px;
+    
+        --font-size-aboutus-h1: 20px;
+        --font-size-aboutus-p:  12px;
+    
+        --font-size-realization-p: 20px;
+    }
+    .header{
+     
+            img{
+            height: 64px;
+           
+        }
+    }
 
+    .hero{
+        .home{
+            .home-bg{
+                .home-content-container{
+                    align-items: end;
+
+                    .blur2{
+                        height: 30%;
+                        width: 100%;
+                    }
+                    .home-content-left{
+                        width: 80%;
+                        padding: 1%;
+    
+                        animation: slideRight 2s ease forwards;
+                        h1{
+                            font-size: var(--font-size-home-h1);
+                        }
+                        p{
+                            font-size: var(--font-size-home-p);
+                        }
+                    }
+        
+                }
+            }
+        }
+        .about-us{
+            // background-color: rebeccapurple;
+            justify-content: start;
+            height: 800px;
+            .about-us-box{
+                width: 70%;
+                height: 200px;
+            }
+        }
+    }
 }
