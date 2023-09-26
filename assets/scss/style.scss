@@ -112,9 +112,19 @@ html {
     // }
 }
 
+.bg{
+    background: url(../img/home-bg-new.png); 
+    background-repeat: no-repeat;
+    background-position: center center;  
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
 .hero{
     // padding: 0 8%;
     // padding-top: 4%;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,16 +133,18 @@ html {
 
     font-family: 'Source Code Pro', monospace; 
 
-    background: url(../img/home-bg-new.png); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;   
-    background-attachment: fixed;
+    // background: url(../img/home-bg-new.png); 
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center center;   
+    // background-attachment: fixed;
 
-    -webkit-background-size: cover;
-    -webkit-background-repeat: no-repeat;
-    -webkit-background-position: center center;   
-    -webkit-background-attachment: fixed;
+    // -webkit-background-size: cover;
+    // -webkit-background-repeat: no-repeat;
+    // -webkit-background-position: center center;   
+    // -webkit-background-attachment: fixed;
+
+    // transform: translate3d(0,0,0); 
 
     .home{
         width: 100%;
